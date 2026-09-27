@@ -1,0 +1,353 @@
+[
+  {
+    "id": "flexiones_pared",
+    "name": "Flexiones en pared",
+    "muscle_groups": [
+      "pecho",
+      "triceps"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "De pie frente a una pared, manos a la altura del pecho. Flexiona los codos acercando el pecho a la pared y empuja.",
+    "video_url": "https://example.com/videos/flexiones_pared.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "flexiones_rodillas",
+    "name": "Flexiones con rodillas apoyadas",
+    "muscle_groups": [
+      "pecho",
+      "triceps"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Igual que la flexión estándar pero con rodillas en el suelo, para reducir la carga mientras se gana fuerza.",
+    "video_url": "https://example.com/videos/flexiones_rodillas.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "flexiones",
+    "name": "Flexiones de pecho",
+    "muscle_groups": [
+      "pecho",
+      "triceps",
+      "hombro"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Manos a la altura de los hombros, cuerpo recto de cabeza a talones, baja el pecho casi hasta el suelo y empuja.",
+    "video_url": "https://example.com/videos/flexiones.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "flexiones_diamante",
+    "name": "Flexiones diamante",
+    "muscle_groups": [
+      "triceps",
+      "pecho"
+    ],
+    "equipment_needed": [],
+    "difficulty": "intermedio",
+    "instructions": "Manos juntas bajo el pecho formando un diamante. Baja controlado.",
+    "video_url": "https://example.com/videos/flexiones_diamante.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "flexiones_pica",
+    "name": "Flexiones pica (pike push-up)",
+    "muscle_groups": [
+      "hombro",
+      "triceps"
+    ],
+    "equipment_needed": [],
+    "difficulty": "intermedio",
+    "instructions": "Cadera elevada en V invertida, baja la cabeza hacia el suelo y empuja.",
+    "video_url": "https://example.com/videos/flexiones_pica.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "sentadillas",
+    "name": "Sentadillas (squat)",
+    "muscle_groups": [
+      "cuadriceps",
+      "gluteos"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Pies al ancho de hombros, baja como si te sentaras, pecho arriba, rodillas alineadas con los pies.",
+    "video_url": "https://example.com/videos/sentadillas.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "sentadilla_sumo",
+    "name": "Sentadilla sumo",
+    "muscle_groups": [
+      "cuadriceps",
+      "gluteos",
+      "aductores"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Pies bien separados, puntas hacia afuera, baja en sentadilla manteniendo la espalda recta.",
+    "video_url": "https://example.com/videos/sentadilla_sumo.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "sentadilla_salto",
+    "name": "Sentadilla con salto",
+    "muscle_groups": [
+      "cuadriceps",
+      "gluteos",
+      "cardio"
+    ],
+    "equipment_needed": [],
+    "difficulty": "intermedio",
+    "instructions": "Baja en sentadilla y explota hacia arriba en un salto, aterriza suave.",
+    "video_url": "https://example.com/videos/sentadilla_salto.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "zancadas",
+    "name": "Zancadas (lunges)",
+    "muscle_groups": [
+      "cuadriceps",
+      "gluteos"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Da un paso largo al frente, baja la rodilla trasera casi al suelo y vuelve. Alterna piernas.",
+    "video_url": "https://example.com/videos/zancadas.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "zancada_lateral",
+    "name": "Zancada lateral",
+    "muscle_groups": [
+      "cuadriceps",
+      "gluteos",
+      "aductores"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Da un paso amplio hacia el lado, flexiona esa rodilla y vuelve al centro.",
+    "video_url": "https://example.com/videos/zancada_lateral.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "sentadilla_bulgara",
+    "name": "Sentadilla búlgara",
+    "muscle_groups": [
+      "cuadriceps",
+      "gluteos"
+    ],
+    "equipment_needed": [
+      "silla_o_banco"
+    ],
+    "difficulty": "intermedio",
+    "instructions": "Pie trasero apoyado en una silla o banco, baja en sentadilla con la pierna delantera.",
+    "video_url": "https://example.com/videos/sentadilla_bulgara.mp4",
+    "no_equipment_variation_id": "zancadas"
+  },
+  {
+    "id": "plancha",
+    "name": "Plancha abdominal (plank)",
+    "muscle_groups": [
+      "core"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Antebrazos y puntas de los pies en el suelo, cuerpo en línea recta, aprieta el abdomen.",
+    "video_url": "https://example.com/videos/plancha.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "plancha_lateral",
+    "name": "Plancha lateral",
+    "muscle_groups": [
+      "core",
+      "oblicuos"
+    ],
+    "equipment_needed": [],
+    "difficulty": "intermedio",
+    "instructions": "Apoyo en un antebrazo, cuerpo de lado en línea recta, cadera arriba sin caer.",
+    "video_url": "https://example.com/videos/plancha_lateral.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "plancha_toques_hombro",
+    "name": "Plancha con toques de hombro",
+    "muscle_groups": [
+      "core",
+      "hombro"
+    ],
+    "equipment_needed": [],
+    "difficulty": "intermedio",
+    "instructions": "En plancha alta, toca el hombro contrario con cada mano alternando, sin mover la cadera.",
+    "video_url": "https://example.com/videos/plancha_toques_hombro.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "abdominales_bicicleta",
+    "name": "Abdominales bicicleta",
+    "muscle_groups": [
+      "core",
+      "oblicuos"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Acostado boca arriba, lleva codo contrario a rodilla contraria en un pedaleo controlado.",
+    "video_url": "https://example.com/videos/abdominales_bicicleta.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "elevacion_piernas_acostado",
+    "name": "Elevación de piernas acostado",
+    "muscle_groups": [
+      "core",
+      "abdomen_bajo"
+    ],
+    "equipment_needed": [],
+    "difficulty": "intermedio",
+    "instructions": "Acostado boca arriba, piernas rectas, sube y baja sin despegar la zona lumbar.",
+    "video_url": "https://example.com/videos/elevacion_piernas_acostado.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "superman",
+    "name": "Superman",
+    "muscle_groups": [
+      "espalda_baja",
+      "gluteos"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Boca abajo, eleva brazos y piernas al mismo tiempo, sostén y baja controlado.",
+    "video_url": "https://example.com/videos/superman.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "puente_gluteo",
+    "name": "Puente de glúteos",
+    "muscle_groups": [
+      "gluteos",
+      "isquiotibiales"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Acostado, rodillas flexionadas, eleva la cadera apretando glúteos y baja sin tocar el suelo.",
+    "video_url": "https://example.com/videos/puente_gluteo.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "burpees",
+    "name": "Burpees",
+    "muscle_groups": [
+      "full_body",
+      "cardio"
+    ],
+    "equipment_needed": [],
+    "difficulty": "intermedio",
+    "instructions": "De pie, baja a sentadilla, apoya manos, salta pies atrás a plancha, flexión, vuelve y salta arriba.",
+    "video_url": "https://example.com/videos/burpees.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "escaladores",
+    "name": "Escaladores (mountain climbers)",
+    "muscle_groups": [
+      "core",
+      "cardio"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "En plancha alta, lleva rodillas al pecho alternando rápido.",
+    "video_url": "https://example.com/videos/escaladores.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "rodillas_altas",
+    "name": "Rodillas altas (high knees)",
+    "muscle_groups": [
+      "cardio",
+      "piernas"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Trota en el sitio llevando las rodillas a la altura de la cadera lo más rápido posible.",
+    "video_url": "https://example.com/videos/rodillas_altas.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "salto_tijera",
+    "name": "Salto de tijera (jumping jacks)",
+    "muscle_groups": [
+      "cardio",
+      "full_body"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Salta separando piernas y brazos hacia afuera, vuelve a la posición inicial en el mismo salto.",
+    "video_url": "https://example.com/videos/salto_tijera.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "dominadas",
+    "name": "Dominadas (pull-ups)",
+    "muscle_groups": [
+      "espalda",
+      "biceps"
+    ],
+    "equipment_needed": [
+      "barra"
+    ],
+    "difficulty": "avanzado",
+    "instructions": "Cuelga de la barra con agarre prono, sube hasta que la barbilla pase la barra, baja controlado.",
+    "video_url": "https://example.com/videos/dominadas.mp4",
+    "no_equipment_variation_id": "remo_invertido_mesa"
+  },
+  {
+    "id": "remo_invertido_mesa",
+    "name": "Remo invertido bajo mesa (sin barra)",
+    "muscle_groups": [
+      "espalda",
+      "biceps"
+    ],
+    "equipment_needed": [
+      "mesa_resistente"
+    ],
+    "difficulty": "principiante",
+    "instructions": "Acostado bajo una mesa firme, sujeta el borde y tira del pecho hacia la mesa.",
+    "video_url": "https://example.com/videos/remo_invertido_mesa.mp4",
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "elevacion_piernas_colgado",
+    "name": "Elevación de piernas colgado de la barra",
+    "muscle_groups": [
+      "core",
+      "abdomen_bajo"
+    ],
+    "equipment_needed": [
+      "barra"
+    ],
+    "difficulty": "avanzado",
+    "instructions": "Colgado de la barra, sube las piernas rectas o con rodillas flexionadas sin balancear.",
+    "video_url": "https://example.com/videos/elevacion_piernas_colgado.mp4",
+    "no_equipment_variation_id": "elevacion_piernas_acostado"
+  },
+  {
+    "id": "fondos_banco",
+    "name": "Fondos de tríceps en banco/silla",
+    "muscle_groups": [
+      "triceps",
+      "hombro"
+    ],
+    "equipment_needed": [
+      "silla_o_banco"
+    ],
+    "difficulty": "intermedio",
+    "instructions": "Manos en el borde de una silla, piernas extendidas, baja el cuerpo doblando los codos y empuja.",
+    "video_url": "https://example.com/videos/fondos_banco.mp4",
+    "no_equipment_variation_id": "flexiones_diamante"
+  }
+]

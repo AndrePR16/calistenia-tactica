@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.env
+backend/data-store/db.json
+backend/data-store/emails/
