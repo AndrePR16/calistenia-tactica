@@ -104,12 +104,31 @@ export default function Routine() {
 
         <div style={{ background: C.panel, border: `1px solid ${C.line}`, borderRadius: 8, overflow: "hidden" }}>
           <div style={{ position: "relative", paddingBottom: "56%", background: C.panel2, borderBottom: `1px solid ${C.line}` }}>
-            <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, color: C.muted }}>
-              <div style={{ width: 44, height: 44, borderRadius: "50%", border: `2px solid ${C.moss}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <Play size={18} color={C.moss} fill={C.moss} />
+            {shownEx.video_url ? (
+              <img
+                key={shownEx.video_url}
+                src={shownEx.video_url}
+                alt={shownEx.name}
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", background: "#000" }}
+              />
+            ) : (
+              <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, color: C.muted }}>
+                <div style={{ width: 44, height: 44, borderRadius: "50%", border: `2px solid ${C.moss}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <Play size={18} color={C.moss} fill={C.moss} />
+                </div>
+                <span style={{ fontSize: 11, ...mono }}>VIDEO: {shownEx.name.toUpperCase()}</span>
               </div>
-              <span style={{ fontSize: 11, ...mono }}>VIDEO: {shownEx.name.toUpperCase()}</span>
-            </div>
+            )}
+            {shownEx.video_is_approximate && (
+              <span
+                style={{
+                  position: "absolute", bottom: 6, left: 6, background: "rgba(10,11,8,0.85)",
+                  color: C.amber, fontSize: 9, padding: "3px 6px", borderRadius: 3, ...mono,
+                }}
+              >
+                GIF DE REFERENCIA
+              </span>
+            )}
           </div>
 
           <div style={{ padding: 16 }}>

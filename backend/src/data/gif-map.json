@@ -1,0 +1,158 @@
+{
+  "flexiones_pared": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/pectorals/push-up-wall.gif",
+    "sourceSlug": "push-up-wall",
+    "sourceName": "Flexión, pared",
+    "equipmentInSource": "bodyweight"
+  },
+  "flexiones_rodillas": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/pectorals/kneeling-push-up-male.gif",
+    "sourceSlug": "kneeling-push-up-male",
+    "sourceName": "Flexión, de rodillas",
+    "equipmentInSource": "bodyweight"
+  },
+  "flexiones": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/pectorals/push-up.gif",
+    "sourceSlug": "push-up",
+    "sourceName": "Flexión",
+    "equipmentInSource": "bodyweight"
+  },
+  "flexiones_diamante": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/triceps/diamond-push-up.gif",
+    "sourceSlug": "diamond-push-up",
+    "sourceName": "Flexión diamante",
+    "equipmentInSource": "bodyweight"
+  },
+  "flexiones_pica": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/pike-to-cobra-push-up.gif",
+    "sourceSlug": "pike-to-cobra-push-up",
+    "sourceName": "Flexión pike-cobra",
+    "equipmentInSource": "bodyweight"
+  },
+  "sentadillas": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/potty-squat.gif",
+    "sourceSlug": "potty-squat",
+    "sourceName": "Sentadilla potty",
+    "equipmentInSource": "bodyweight"
+  },
+  "sentadilla_sumo": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/smith-sumo-squat.gif",
+    "sourceSlug": "smith-sumo-squat",
+    "sourceName": "Sentadilla sumo en máquina Smith",
+    "equipmentInSource": "smith"
+  },
+  "sentadilla_salto": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/jump-squat.gif",
+    "sourceSlug": "jump-squat",
+    "sourceName": "Sentadilla con salto",
+    "equipmentInSource": "bodyweight"
+  },
+  "zancadas": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/forward-lunge-male.gif",
+    "sourceSlug": "forward-lunge-male",
+    "sourceName": "Zancada, hacia adelante",
+    "equipmentInSource": "bodyweight"
+  },
+  "zancada_lateral": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/barbell-lateral-lunge.gif",
+    "sourceSlug": "barbell-lateral-lunge",
+    "sourceName": "Zancada con barra, lateral",
+    "equipmentInSource": "barbell"
+  },
+  "sentadilla_bulgara": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/quads/split-squats.gif",
+    "sourceSlug": "split-squats",
+    "sourceName": "Split squat",
+    "equipmentInSource": "bodyweight"
+  },
+  "plancha": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/power-point-plank.gif",
+    "sourceSlug": "power-point-plank",
+    "sourceName": "Plancha, potencia punto",
+    "equipmentInSource": "bodyweight"
+  },
+  "plancha_lateral": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/adductors/side-plank-hip-adduction.gif",
+    "sourceSlug": "side-plank-hip-adduction",
+    "sourceName": "Aducción de cadera en plancha lateral",
+    "equipmentInSource": "bodyweight"
+  },
+  "plancha_toques_hombro": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/shoulder-tap.gif",
+    "sourceSlug": "shoulder-tap",
+    "sourceName": "Toque de hombro",
+    "equipmentInSource": "bodyweight"
+  },
+  "abdominales_bicicleta": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/air-bike.gif",
+    "sourceSlug": "air-bike",
+    "sourceName": "Bicicleta aérea",
+    "equipmentInSource": "bodyweight"
+  },
+  "elevacion_piernas_acostado": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/lying-leg-raise-flat-bench.gif",
+    "sourceSlug": "lying-leg-raise-flat-bench",
+    "sourceName": "Elevación de piernas, tumbado, en banco plano",
+    "equipmentInSource": "bodyweight"
+  },
+  "superman": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/pectorals/superman-push-up.gif",
+    "sourceSlug": "superman-push-up",
+    "sourceName": "Flexión superman",
+    "equipmentInSource": "bodyweight"
+  },
+  "puente_gluteo": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/low-glute-bridge-on-floor.gif",
+    "sourceSlug": "low-glute-bridge-on-floor",
+    "sourceName": "Puente de glúteos, bajo en el suelo",
+    "equipmentInSource": "bodyweight"
+  },
+  "burpees": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/cardio/burpee.gif",
+    "sourceSlug": "burpee",
+    "sourceName": "Burpee",
+    "equipmentInSource": "bodyweight"
+  },
+  "escaladores": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/cardio/mountain-climber.gif",
+    "sourceSlug": "mountain-climber",
+    "sourceName": "Escalador",
+    "equipmentInSource": "bodyweight"
+  },
+  "rodillas_altas": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/cardio/walking-high-knees-lunge.gif",
+    "sourceSlug": "walking-high-knees-lunge",
+    "sourceName": "Rodillas altas, caminando lunge",
+    "equipmentInSource": "bodyweight"
+  },
+  "salto_tijera": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/cardio/star-jump-male.gif",
+    "sourceSlug": "star-jump-male",
+    "sourceName": "Salto, star",
+    "equipmentInSource": "bodyweight"
+  },
+  "dominadas": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/lats/pull-up.gif",
+    "sourceSlug": "pull-up",
+    "sourceName": "Dominada",
+    "equipmentInSource": "bodyweight"
+  },
+  "remo_invertido_mesa": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/upper-back/inverted-row.gif",
+    "sourceSlug": "inverted-row",
+    "sourceName": "Remo invertido",
+    "equipmentInSource": "bodyweight"
+  },
+  "elevacion_piernas_colgado": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/hanging-leg-raise.gif",
+    "sourceSlug": "hanging-leg-raise",
+    "sourceName": "Elevación de piernas en barra",
+    "equipmentInSource": "bodyweight"
+  },
+  "fondos_banco": {
+    "gifUrl": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/triceps/bench-dip-on-floor.gif",
+    "sourceSlug": "bench-dip-on-floor",
+    "sourceName": "Fondo en banco, en el suelo",
+    "equipmentInSource": "bodyweight"
+  }
+}

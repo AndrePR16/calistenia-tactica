@@ -123,6 +123,37 @@ for (let day = 1; day <= 30; day++) {
   });
 }
 
+// --- GIFs reales (US: "agregar videos según los ejercicios") ---
+// gif-map.json se genera con build-gif-map.js a partir del dataset abierto
+// JahelCuadrado/ExerciseGymGifsDB (GIFs en español, servidos por jsDelivr).
+// Si no existe (primera vez, o si borraste el caché), se avisa y se deja el
+// video_url de placeholder para no romper el resto del pipeline.
+const gifMapPath = path.join(__dirname, "gif-map.json");
+let gifMap = {};
+if (fs.existsSync(gifMapPath)) {
+  gifMap = JSON.parse(fs.readFileSync(gifMapPath, "utf-8"));
+} else {
+  console.warn(
+    "⚠ No se encontró gif-map.json — los ejercicios quedarán con video_url de placeholder. Corre build-gif-map.js primero."
+  );
+}
+
+// Estos dos no tienen variante bodyweight en el dataset fuente; el gif
+// mostrado es de un equipo distinto (Smith / barra) solo como referencia
+// visual del movimiento. Reemplazar por un video propio apenas se pueda.
+const APPROXIMATE_MATCH = new Set(["sentadilla_sumo", "zancada_lateral"]);
+
+for (const ex of exercises) {
+  const match = gifMap[ex.id];
+  if (!match) continue;
+  ex.video_url = match.gifUrl;
+  ex.video_source = "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)";
+  if (APPROXIMATE_MATCH.has(ex.id)) {
+    ex.video_is_approximate = true;
+  }
+}
+
 fs.writeFileSync(path.join(__dirname, "exercises.json"), JSON.stringify(exercises, null, 2));
 fs.writeFileSync(path.join(__dirname, "routines.json"), JSON.stringify(routines, null, 2));
 console.log(`OK: ${exercises.length} ejercicios, ${routines.length} días generados.`);
+console.log(`   GIFs reales aplicados: ${Object.keys(gifMap).length}/${exercises.length}`);

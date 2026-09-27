@@ -64,11 +64,38 @@ Abre `http://localhost:5173` en el navegador.
 | Test antes de comprar (US-28) para tráfico de anuncios | **Real** — detecta `?utm_source=` y guarda el lead aunque no compre |
 | Envío de correo con accesos (US-27) | **Simulado** — se guarda como archivo de texto en vez de enviarse. Ver abajo cómo activar el envío real. |
 | Cobro con Culqi | **Simulado** — el botón "Pagar" llama directo al endpoint que crea la cuenta, sin pasar por una pasarela real todavía |
-| Videos de ejercicios | **Placeholder** — el catálogo trae una URL de ejemplo (`video_url`) que hay que reemplazar por tus videos reales |
+| Videos de ejercicios | **Real, pero temporal** — cada uno de los 26 ejercicios tiene su GIF real de `JahelCuadrado/ExerciseGymGifsDB` (ver advertencia legal abajo, sección "Antes de vender") |
 
 ## De prueba local a producción
 
-Tres cosas hay que resolver antes de vender esto de verdad, en este orden:
+**⚠️ Lee primero esta advertencia sobre los GIFs — es la más urgente de las
+cuatro, no la más técnica.**
+
+0. **Licencia de los GIFs — resolver ANTES de cobrarle a un usuario real**:
+   los 26 GIFs vienen del repositorio público
+   [`JahelCuadrado/ExerciseGymGifsDB`](https://github.com/JahelCuadrado/ExerciseGymGifsDB),
+   servidos vía jsDelivr. Lo revisé y **ese repositorio no tiene un archivo
+   `LICENSE`** — ni ahí ni, que yo haya encontrado, en su README. Sin una
+   licencia explícita, el default legal es "todos los derechos reservados":
+   está bien usarlo así mientras estás probando y desarrollando (que es
+   exactamente lo que hicimos), pero **no es seguro venderlo así** sin
+   confirmar permiso del autor. Antes de aceptar el primer pago real, elige
+   una de estas:
+   - Escribirle al autor del repo y pedir autorización explícita por escrito
+     para uso comercial (lo más rápido si responde).
+   - Contratar la versión de pago de ExerciseDB en RapidAPI, que sí tiene
+     términos comerciales claros.
+   - Grabar tú mismo los 26 clips — con 5 ejercicios por día y contenido que
+     ya conoces bien, es más manejable de lo que sueles pensar, y te da
+     control total sobre la calidad y el estilo.
+   - No soy abogado, así que si tienes dudas de qué tan expuesto quedarías,
+     esto es algo puntual que vale la pena confirmar con uno antes de lanzar.
+   Mientras tanto, el archivo `backend/src/data/gif-map.json` es donde vive
+   el mapeo ejercicio → GIF: cambiar la fuente es solo reemplazar esas 26
+   URLs, no tocar el resto del código.
+
+Otras tres cosas hay que resolver antes de vender esto de verdad, en este
+orden:
 
 1. **Correo real**: crea una cuenta en un proveedor SMTP (SendGrid, Mailgun,
    Resend, o el de tu propio hosting) y rellena `SMTP_HOST`, `SMTP_USER`,
