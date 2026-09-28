@@ -6,6 +6,8 @@ const {
   SILUETA_OPCIONES,
   OBJETIVO_OPCIONES,
   EXPERIENCIA_OPCIONES,
+  TIPO_OPERADOR_OPCIONES,
+  TIPO_OPERADOR_INFO,
 } = require("../utils/recommendation");
 
 const router = express.Router();
@@ -17,15 +19,19 @@ function buildRouter(authMiddleware) {
       objetivo: OBJETIVO_OPCIONES,
       experiencia: EXPERIENCIA_OPCIONES,
       silueta: SILUETA_OPCIONES,
+      tipo_operador: TIPO_OPERADOR_OPCIONES,
+      tipo_operador_info: TIPO_OPERADOR_INFO,
     });
   });
 
   function validateAnswers(body) {
-    const { peso, estatura, edad, objetivo, experiencia, silueta } = body || {};
+    const { nombre, peso, estatura, objetivo, experiencia, silueta, tipo_operador } = body || {};
+    if (!nombre || !nombre.trim()) return "El nombre es obligatorio";
     if (!peso || !estatura) return "Peso y estatura son obligatorios";
     if (!OBJETIVO_OPCIONES.includes(objetivo)) return "Objetivo inválido";
     if (!EXPERIENCIA_OPCIONES.includes(experiencia)) return "Experiencia inválida";
     if (silueta && !SILUETA_OPCIONES.includes(silueta)) return "Silueta inválida";
+    if (!TIPO_OPERADOR_OPCIONES.includes(tipo_operador)) return "Clasificación de operador inválida";
     return null;
   }
 
@@ -39,14 +45,14 @@ function buildRouter(authMiddleware) {
     const error = validateAnswers(req.body);
     if (error) return res.status(400).json({ error });
 
-    const { peso, estatura, edad, objetivo, experiencia, silueta, utm_source } = req.body;
+    const { nombre, peso, estatura, edad, peso_objetivo, objetivo, experiencia, silueta, tipo_operador, utm_source } = req.body;
     const recommendation = recomendar({ objetivo, experiencia });
 
     const db = readDb();
     const leadId = uuid();
     db.leads[leadId] = {
       id: leadId,
-      answers: { peso, estatura, edad, objetivo, experiencia, silueta },
+      answers: { nombre, peso, estatura, edad, peso_objetivo, objetivo, experiencia, silueta, tipo_operador },
       utm_source: utm_source || null,
       recommendation,
       createdAt: new Date().toISOString(),
@@ -66,12 +72,12 @@ function buildRouter(authMiddleware) {
     const error = validateAnswers(req.body);
     if (error) return res.status(400).json({ error });
 
-    const { peso, estatura, edad, objetivo, experiencia, silueta } = req.body;
+    const { nombre, peso, estatura, edad, peso_objetivo, objetivo, experiencia, silueta, tipo_operador } = req.body;
     const recommendation = recomendar({ objetivo, experiencia });
 
     const db = readDb();
     db.profiles[req.userId] = {
-      peso, estatura, edad, objetivo, experiencia, silueta,
+      nombre, peso, estatura, edad, peso_objetivo, objetivo, experiencia, silueta, tipo_operador,
       recommendation,
       createdAt: new Date().toISOString(),
     };

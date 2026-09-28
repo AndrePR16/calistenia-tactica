@@ -26,6 +26,18 @@ const SILUETA_OPCIONES = ["delgado", "promedio", "atletico", "contextura_mayor"]
 const OBJETIVO_OPCIONES = ["fuerza", "resistencia", "perdida_peso"];
 const EXPERIENCIA_OPCIONES = ["nunca_entrene", "entrene_antes", "entreno_actualmente"];
 
+// "Clasificación de operador": igual que la silueta, es una etiqueta que el
+// usuario elige para su propia identidad/motivación dentro de la app, pero
+// NO decide el contenido de la rutina — el punto de partida sigue
+// dependiendo únicamente de la experiencia previa (ver comentario arriba).
+const TIPO_OPERADOR_OPCIONES = ["muscular", "atletico", "potencia", "agil"];
+const TIPO_OPERADOR_INFO = {
+  muscular: { label: "Muscular", desc: "Alto enfoque en hipertrofia" },
+  atletico: { label: "Atlético", desc: "Resistencia y fuerza equilibrada" },
+  potencia: { label: "Potencia", desc: "Salida de fuerza máxima" },
+  agil: { label: "Ágil", desc: "Alta movilidad y definición" },
+};
+
 function recomendar({ objetivo, experiencia }) {
   const startWeek = EXPERIENCIA_A_SEMANA[experiencia] || 1;
   const startDay = (startWeek - 1) * 7 + 1;
@@ -49,4 +61,6 @@ module.exports = {
   SILUETA_OPCIONES,
   OBJETIVO_OPCIONES,
   EXPERIENCIA_OPCIONES,
+  TIPO_OPERADOR_OPCIONES,
+  TIPO_OPERADOR_INFO,
 };

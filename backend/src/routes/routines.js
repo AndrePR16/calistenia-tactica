@@ -12,6 +12,23 @@ const routines = JSON.parse(
 
 const exercisesById = Object.fromEntries(exercises.map((e) => [e.id, e]));
 
+// Etiqueta visual del "tipo" de día (Fuerza / Mixto / HIIT / Recuperación),
+// calculada a partir de los grupos musculares reales del catálogo — no es un
+// campo nuevo que haya que mantener a mano en routines.json. La mayoría de
+// los días tienen 1 solo ejercicio "cardio" como cierre (no cambia el
+// carácter del día, sigue siendo Fuerza); con 2 ya es Mixto; con 3 o más es
+// un circuito de HIIT.
+function computeDayType(routine) {
+  if (routine.is_recovery_day) return "Recuperación";
+  const cardioCount = routine.exercises.filter((item) => {
+    const ex = exercisesById[item.exercise_id];
+    return ex && ex.muscle_groups.includes("cardio");
+  }).length;
+  if (cardioCount >= 3) return "HIIT";
+  if (cardioCount >= 2) return "Mixto";
+  return "Fuerza";
+}
+
 function buildRouter(authMiddleware) {
   const router = express.Router();
 
@@ -35,6 +52,8 @@ function buildRouter(authMiddleware) {
       day: r.day,
       title: r.title,
       is_recovery_day: r.is_recovery_day,
+      tipo: computeDayType(r),
+      exercise_count: r.exercises.length,
       status: progress.completedDays.includes(r.day)
         ? "completado"
         : r.day <= max
@@ -69,6 +88,7 @@ function buildRouter(authMiddleware) {
 
     res.json({
       ...routine,
+      tipo: computeDayType(routine),
       exercises: exercisesResolved,
       already_completed: progress.completedDays.includes(day),
     });
