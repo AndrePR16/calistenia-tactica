@@ -1,5 +1,13 @@
-// Genera exercises.json y routines.json (catálogo + plan de 30 días, Nivel 1 - Básico)
+// Genera exercises.json y routines.json (catálogo + plan de 21 días, Nivel 1 - Básico)
 // Ejecutar una sola vez: node src/data/generate-data.js
+//
+// Por qué 21 y no 30: el cuerpo necesita descanso real entre bloques de
+// entrenamiento, así que el Nivel 1 se acortó a 3 semanas (21 días, con
+// recuperación activa en los días 7/14/21). Las plantillas de la semana 4
+// (`semanas[4]`, más exigentes) se dejaron en este archivo sin usar —
+// están pensadas para la Fase 2 (un programa de 28 días más intenso que
+// se vendería como continuación), no hace falta rehacerlas cuando llegue
+// ese momento.
 const fs = require("fs");
 const path = require("path");
 
@@ -94,8 +102,10 @@ const RECOVERY = [
   ["rodillas_altas", 2, "20s", 30],
 ];
 
+const TOTAL_DAYS = 21;
+
 const routines = [];
-for (let day = 1; day <= 30; day++) {
+for (let day = 1; day <= TOTAL_DAYS; day++) {
   const realWeek = Math.floor((day - 1) / 7) + 1;
   const templateWeek = Math.min(realWeek, 4);
   const dayInWeek = ((day - 1) % 7) + 1;

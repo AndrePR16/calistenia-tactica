@@ -47,7 +47,7 @@ Abre `http://localhost:5173` en el navegador.
    También puedes verlo en `backend/data-store/emails/` — ahí queda guardado
    el "correo" como si lo hubieras recibido de verdad.
 6. Inicia sesión con esas credenciales.
-7. Verás tu dashboard de 30 días: Día 1 disponible, el resto bloqueado.
+7. Verás tu dashboard de 21 días: Día 1 disponible, el resto bloqueado.
 8. Entra al Día 1, avanza ejercicio por ejercicio (fíjate en el segundo
    ejercicio de la Semana 1, Día 1 — tiene pestañas "Con silla" / "Sin
    equipo" para que veas la variación funcionando).
@@ -59,7 +59,7 @@ Abre `http://localhost:5173` en el navegador.
 | Parte | Estado |
 |---|---|
 | Login, dashboard, rutina diaria, desbloqueo por día | **Real** — corre contra el backend, persiste en `backend/data-store/db.json` |
-| Catálogo de 30 días + variaciones sin equipo | **Real** — mismo contenido que ya habíamos validado (0 repeticiones por semana) |
+| Catálogo de 21 días + variaciones sin equipo | **Real** — mismo contenido que ya habíamos validado (0 repeticiones por semana). Se acortó de 30 a 21 días para respetar el descanso del cuerpo; la Fase 2 (28 días, más intensa) queda pendiente como programa de continuación. |
 | Recomendación de nivel según experiencia/objetivo | **Real**, reglas simples (ver `backend/src/utils/recommendation.js`) |
 | Test antes de comprar (US-28) para tráfico de anuncios | **Real** — detecta `?utm_source=` y guarda el lead aunque no compre |
 | Envío de correo con accesos (US-27) | **Simulado** — se guarda como archivo de texto en vez de enviarse. Ver abajo cómo activar el envío real. |

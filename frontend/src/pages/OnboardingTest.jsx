@@ -240,7 +240,7 @@ export default function OnboardingTest({ mode = "lead" }) {
           {mode === "lead" ? (
             <>
               <p style={{ fontSize: 13, color: C.muted, marginBottom: 16 }}>
-                Programa completo de 30 días — pago único, acceso inmediato.
+                Programa completo de 21 días — pago único, acceso inmediato.
               </p>
               <button style={buttonPrimary} onClick={() => setStep("purchase")}>
                 QUIERO ESTE PLAN — S/39

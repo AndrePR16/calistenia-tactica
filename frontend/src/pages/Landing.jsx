@@ -40,7 +40,7 @@ export default function Landing() {
         </div>
         <h1 style={{ ...stencil, fontSize: 26, margin: 0 }}>Calistenia Táctica</h1>
         <p style={{ color: C.muted, fontSize: 13, marginTop: 6, marginBottom: 32 }}>
-          30 días. Sin gimnasio. Sin excusas.
+          21 días. Sin gimnasio. Sin excusas.
         </p>
 
         <button style={buttonPrimary} onClick={() => navigate("/test")}>

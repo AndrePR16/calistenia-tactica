@@ -38,10 +38,12 @@ function buildRouter(authMiddleware) {
 
   function unlockedMax(progress) {
     if (!progress.completedDays.length) return 1;
-    return Math.min(Math.max(...progress.completedDays) + 1, 30);
+    // El tope es routines.length (no un número fijo) para que la duración
+    // del programa se controle solo desde generate-data.js.
+    return Math.min(Math.max(...progress.completedDays) + 1, routines.length);
   }
 
-  // Lista de 30 días con su estado (bloqueado / disponible / completado),
+  // Lista de todos los días con su estado (bloqueado / disponible / completado),
   // para pintar el dashboard.
   router.get("/", authMiddleware, (req, res) => {
     const db = readDb();

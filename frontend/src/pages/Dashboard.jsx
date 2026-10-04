@@ -99,7 +99,7 @@ export default function Dashboard() {
   }
 
   const completedCount = days ? days.filter((d) => d.status === "completado").length : 0;
-  const totalDays = days ? days.length : 30;
+  const totalDays = days ? days.length : 21;
   const nextDay = days ? days.find((d) => d.status === "disponible") : null;
   const allDone = days && !nextDay && completedCount === totalDays;
 
