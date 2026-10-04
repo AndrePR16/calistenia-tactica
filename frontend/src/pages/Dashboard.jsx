@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   CheckCircle2, Lock, ChevronRight, Flame, User, Pencil,
-  Play, UtensilsCrossed, Moon, MessageCircle, LayoutGrid,
+  Play, UtensilsCrossed, Moon, MessageCircle, Swords,
 } from "lucide-react";
 import { Shell, C, stencil, mono } from "../theme.jsx";
 import { api, setToken } from "../lib/api.js";
@@ -97,9 +97,11 @@ export default function Dashboard() {
   const allDone = days && !nextDay && completedCount === totalDays;
 
   return (
-    <Shell>
+    <Shell wide>
+    <div className="ct-dash">
       {/* Header de perfil */}
       <div
+        className="ct-dash-header"
         style={{
           padding: "18px 20px",
           borderBottom: `1px solid ${C.line}`,
@@ -156,6 +158,7 @@ export default function Dashboard() {
         </div>
       </div>
 
+      <div className="ct-dash-main">
       {/* Hero: desafío */}
       <div style={{ padding: "20px 20px 0" }}>
         <p style={{ ...mono, fontSize: 10, color: C.moss, letterSpacing: "0.08em", margin: "0 0 2px" }}>
@@ -242,16 +245,18 @@ export default function Dashboard() {
           <p style={{ ...mono, fontSize: 11, color: C.muted, letterSpacing: "0.06em", marginBottom: 10 }}>
             LÍNEA DE TIEMPO DE MISIÓN
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 6 }}>
+          <div className="ct-dash-days-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 6 }}>
             {days.map((d) => (
               <DayTile key={d.day} d={d} onOpen={(day) => navigate(`/routine/${day}`)} />
             ))}
           </div>
         </div>
       )}
+      </div>
 
-      {/* Barra inferior */}
+      {/* Barra de navegación (inferior en móvil, lateral en escritorio) */}
       <div
+        className="ct-dash-nav"
         style={{
           borderTop: `1px solid ${C.line}`,
           padding: "10px 20px",
@@ -272,33 +277,34 @@ export default function Dashboard() {
             {toast}
           </div>
         )}
-        <button onClick={() => navigate("/onboarding")} style={navBtn}>
+        <button className="ct-navbtn" onClick={() => navigate("/onboarding")} style={navBtn}>
           <User size={18} color={C.muted} />
-          <span style={navLabel}>PERFIL</span>
-        </button>
-        <button onClick={() => showToast("Nutrición táctica: próximamente")} style={navBtn}>
-          <UtensilsCrossed size={18} color={C.muted} />
-          <span style={navLabel}>NUTRICIÓN</span>
+          <span className="ct-navlabel" style={navLabel}>PERFIL</span>
         </button>
         <button
+          className="ct-navbtn"
           onClick={() => (nextDay ? navigate(`/routine/${nextDay.day}`) : showToast("Ya completaste todos los días"))}
-          style={{
-            width: 46, height: 46, borderRadius: "50%", background: C.moss,
-            border: `3px solid ${C.ink}`, boxShadow: `0 0 0 1px ${C.moss}`,
-            display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0,
-          }}
+          style={navBtn}
         >
-          <LayoutGrid size={18} color="#14170F" />
+          <Swords size={18} color={C.moss} />
+          <span className="ct-navlabel" style={{ ...navLabel, color: C.moss }}>
+            {nextDay ? `DÍA ${nextDay.day}` : "HOY"}
+          </span>
         </button>
-        <button onClick={() => showToast("Protocolo de sueño: próximamente")} style={navBtn}>
+        <button className="ct-navbtn" onClick={() => showToast("Nutrición táctica: próximamente")} style={navBtn}>
+          <UtensilsCrossed size={18} color={C.muted} />
+          <span className="ct-navlabel" style={navLabel}>NUTRICIÓN</span>
+        </button>
+        <button className="ct-navbtn" onClick={() => showToast("Protocolo de sueño: próximamente")} style={navBtn}>
           <Moon size={18} color={C.muted} />
-          <span style={navLabel}>SUEÑO</span>
+          <span className="ct-navlabel" style={navLabel}>SUEÑO</span>
         </button>
-        <button onClick={() => showToast("Asistente táctico: próximamente")} style={navBtn}>
+        <button className="ct-navbtn" onClick={() => showToast("Asistente táctico: próximamente")} style={navBtn}>
           <MessageCircle size={18} color={C.muted} />
-          <span style={navLabel}>CHAT</span>
+          <span className="ct-navlabel" style={navLabel}>CHAT</span>
         </button>
       </div>
+    </div>
     </Shell>
   );
 }

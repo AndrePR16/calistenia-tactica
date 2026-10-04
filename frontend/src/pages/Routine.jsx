@@ -4,6 +4,14 @@ import { ChevronLeft, Play, ArrowRight, Award } from "lucide-react";
 import { Shell, C, stencil, mono } from "../theme.jsx";
 import { api } from "../lib/api.js";
 
+// Hoy el catálogo usa GIFs de referencia; cuando se reemplacen por clips
+// reales (ver lista_ejercicios.md) alcanza con cambiar video_url en
+// exercises.json a un .mp4/.webm/.mov — esto detecta el formato y usa
+// <video> en loop en vez de <img>, sin tocar nada más.
+function isVideoFile(url) {
+  return /\.(mp4|webm|mov)(\?|$)/i.test(url);
+}
+
 export default function Routine() {
   const { day } = useParams();
   const navigate = useNavigate();
@@ -104,7 +112,17 @@ export default function Routine() {
 
         <div style={{ background: C.panel, border: `1px solid ${C.line}`, borderRadius: 8, overflow: "hidden" }}>
           <div style={{ position: "relative", paddingBottom: "56%", background: C.panel2, borderBottom: `1px solid ${C.line}` }}>
-            {shownEx.video_url ? (
+            {shownEx.video_url && isVideoFile(shownEx.video_url) ? (
+              <video
+                key={shownEx.video_url}
+                src={shownEx.video_url}
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", background: "#000" }}
+              />
+            ) : shownEx.video_url ? (
               <img
                 key={shownEx.video_url}
                 src={shownEx.video_url}
@@ -126,7 +144,7 @@ export default function Routine() {
                   color: C.amber, fontSize: 9, padding: "3px 6px", borderRadius: 3, ...mono,
                 }}
               >
-                GIF DE REFERENCIA
+                {shownEx.video_url && isVideoFile(shownEx.video_url) ? "VIDEO DE REFERENCIA" : "GIF DE REFERENCIA"}
               </span>
             )}
           </div>

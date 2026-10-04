@@ -52,7 +52,79 @@ export const FontImport = () => (
   <style>{`
     @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
     * { box-sizing: border-box; }
-    body { margin: 0; background: ${C.ink}; }
+    html, body, #root { height: 100%; }
+    body { margin: 0; background: #0A0B08; }
+
+    /* Shell responsive: a pantalla completa en móvil (la app ES la
+       pantalla), tarjeta centrada con fondo ambiental en tablet/desktop
+       para que los costados no se vean vacíos. */
+    .ct-page {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      background:
+        radial-gradient(ellipse 900px 520px at 12% -8%, rgba(143,163,91,0.12), transparent 60%),
+        radial-gradient(ellipse 760px 520px at 100% 108%, rgba(217,164,65,0.08), transparent 60%),
+        #0A0B08;
+    }
+    .ct-shell {
+      width: 100%;
+      max-width: 100%;
+      background: ${C.ink};
+      color: ${C.sand};
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+    @media (min-width: 640px) {
+      .ct-page { align-items: flex-start; padding: 36px 20px; }
+      .ct-shell {
+        max-width: 520px;
+        margin: 0 auto;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid ${C.line};
+        box-shadow: 0 30px 90px rgba(0,0,0,0.55);
+        min-height: calc(100vh - 72px);
+      }
+    }
+    @media (min-width: 1040px) {
+      .ct-shell-wide { max-width: 1080px; }
+    }
+
+    /* Dashboard: en escritorio pasa de pila única a un layout de 2
+       columnas (barra inferior -> sidebar lateral), sin duplicar marcado. */
+    @media (min-width: 1040px) {
+      .ct-dash {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        grid-template-areas: "header header" "nav main";
+        min-height: 100%;
+      }
+      .ct-dash-header { grid-area: header; }
+      .ct-dash-main { grid-area: main; min-width: 0; }
+      .ct-dash-nav {
+        grid-area: nav;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        border-top: none !important;
+        border-right: 1px solid ${C.line};
+        padding: 18px 12px !important;
+        gap: 2px !important;
+      }
+      .ct-dash-nav .ct-navbtn {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        gap: 10px !important;
+        width: 100%;
+        padding: 10px 12px !important;
+        border-radius: 6px;
+      }
+      .ct-dash-nav .ct-navbtn:hover { background: ${C.panel2}; }
+      .ct-dash-nav .ct-navlabel { font-size: 11px !important; }
+      .ct-dash-days-grid { grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)) !important; }
+    }
 
     .ct-slider {
       -webkit-appearance: none;
@@ -334,25 +406,17 @@ export function ProcessingScreen({ icon, messages, durationMs = 2600, onDone }) 
   );
 }
 
-export function Shell({ children }) {
+/**
+ * Marco de toda la app. `wide` la hace más ancha en escritorio (>=1040px)
+ * para layouts de 2 columnas (hoy solo el Dashboard la usa). En móvil
+ * siempre ocupa toda la pantalla; en tablet/desktop es una tarjeta
+ * centrada sobre un fondo ambiental, nunca una isla sobre negro plano.
+ */
+export function Shell({ children, wide = false }) {
   return (
-    <div style={{ background: "#0A0B08", minHeight: "100vh", padding: 24 }}>
+    <div className="ct-page">
       <FontImport />
-      <div
-        style={{
-          maxWidth: 460,
-          margin: "0 auto",
-          background: C.ink,
-          color: C.sand,
-          fontFamily: "'IBM Plex Sans', sans-serif",
-          borderRadius: 12,
-          overflow: "hidden",
-          border: `1px solid ${C.line}`,
-          minHeight: 500,
-        }}
-      >
-        {children}
-      </div>
+      <div className={`ct-shell${wide ? " ct-shell-wide" : ""}`}>{children}</div>
     </div>
   );
 }
