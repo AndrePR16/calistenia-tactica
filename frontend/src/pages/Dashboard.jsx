@@ -31,6 +31,7 @@ function DayTile({ d, onOpen }) {
       onClick={() => onOpen(d.day)}
       style={{
         aspectRatio: "1 / 1",
+        minWidth: 0,
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -38,17 +39,23 @@ function DayTile({ d, onOpen }) {
         border: `1px solid ${done ? C.moss : C.line}`,
         borderTop: `3px solid ${locked ? C.line : color}`,
         borderRadius: 6,
-        padding: "8px 8px",
+        padding: "8px 6px",
         cursor: locked ? "not-allowed" : "pointer",
         opacity: locked ? 0.4 : 1,
         textAlign: "left",
+        overflow: "hidden",
       }}
     >
-      <span style={{ ...mono, fontSize: 10, color: C.muted }}>
+      <span style={{ ...mono, fontSize: 10, color: C.muted, whiteSpace: "nowrap" }}>
         DÍA {String(d.day).padStart(2, "0")}
       </span>
-      <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between" }}>
-        <span style={{ fontSize: 9, ...mono, color, letterSpacing: "0.03em" }}>
+      <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 2, minWidth: 0 }}>
+        <span
+          style={{
+            fontSize: 9, ...mono, color, letterSpacing: "0.03em",
+            whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", minWidth: 0,
+          }}
+        >
           {d.is_recovery_day ? "R.ACTIVA" : d.tipo?.toUpperCase()}
         </span>
         {done ? (
@@ -245,7 +252,7 @@ export default function Dashboard() {
           <p style={{ ...mono, fontSize: 11, color: C.muted, letterSpacing: "0.06em", marginBottom: 10 }}>
             LÍNEA DE TIEMPO DE MISIÓN
           </p>
-          <div className="ct-dash-days-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 6 }}>
+          <div className="ct-dash-days-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, minmax(0, 1fr))", gap: 6 }}>
             {days.map((d) => (
               <DayTile key={d.day} d={d} onOpen={(day) => navigate(`/routine/${day}`)} />
             ))}
