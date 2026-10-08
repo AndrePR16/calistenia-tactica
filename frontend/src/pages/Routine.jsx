@@ -12,6 +12,16 @@ function isVideoFile(url) {
   return /\.(mp4|webm|mov)(\?|$)/i.test(url);
 }
 
+// "segundos", "por_lado", "segundos_por_lado" (ver generate-data.js)
+function formatReps(item) {
+  const unit = item.reps_unit || "";
+  return item.reps + (unit.includes("segundos") ? "s" : "") + (unit.includes("lado") ? " c/lado" : "");
+}
+
+function equipmentLabel(ex) {
+  return (ex.equipment_needed[0] || "").replace(/_/g, " ").toUpperCase();
+}
+
 export default function Routine() {
   const { day } = useParams();
   const navigate = useNavigate();
@@ -78,9 +88,15 @@ export default function Routine() {
         </p>
         <h2 style={{ ...stencil, fontSize: 22, margin: "2px 0 12px" }}>{data.title}</h2>
 
-        <div style={{ borderLeft: `2px solid ${C.moss}`, paddingLeft: 12, marginBottom: 20, fontSize: 13, fontStyle: "italic" }}>
+        <div style={{ borderLeft: `2px solid ${C.moss}`, paddingLeft: 12, marginBottom: data.needs_bar ? 12 : 20, fontSize: 13, fontStyle: "italic" }}>
           "{data.motivational_message}"
         </div>
+
+        {data.needs_bar && (
+          <div style={{ border: `1px solid ${C.amber}`, borderRadius: 4, padding: "8px 10px", marginBottom: 20, fontSize: 12, color: C.amber, lineHeight: 1.4, ...mono }}>
+            DÍA DE BARRA · Lleva este entrenamiento al parque. Si no tienes barra, toca “SIN EQUIPO” en cada ejercicio y haz la alternativa.
+          </div>
+        )}
 
         <div style={{ display: "flex", gap: 4, marginBottom: 8 }}>
           {data.exercises.map((_, i) => (
@@ -93,13 +109,13 @@ export default function Routine() {
       </div>
 
       <div style={{ padding: "0 20px 24px" }}>
-        {currentItem.exercise.equipment_needed.length > 0 && (
+        {currentItem.variation && (
           <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
             <button
               onClick={() => setTabState({ ...tabState, [currentItem.exercise_id]: "con" })}
               style={{ flex: 1, padding: "8px 0", borderRadius: 4, border: `1px solid ${activeTab === "con" ? C.moss : C.line}`, background: activeTab === "con" ? C.mossDark : "transparent", color: C.sand, fontSize: 12, cursor: "pointer", ...mono }}
             >
-              CON {currentItem.exercise.equipment_needed[0].toUpperCase()}
+              CON {equipmentLabel(currentItem.exercise)}
             </button>
             <button
               onClick={() => setTabState({ ...tabState, [currentItem.exercise_id]: "sin" })}
@@ -156,7 +172,7 @@ export default function Routine() {
             <div style={{ display: "flex", gap: 8, ...mono }}>
               {[
                 ["SERIES", currentItem.sets],
-                ["REPS", currentItem.reps + (currentItem.reps_unit === "segundos" ? "s" : "")],
+                ["REPS", formatReps(currentItem)],
                 ["DESCANSO", `${currentItem.rest_seconds}s`],
               ].map(([label, val]) => (
                 <div key={label} style={{ flex: 1, background: C.panel2, border: `1px solid ${C.line}`, borderRadius: 4, textAlign: "center", padding: "8px 4px" }}>

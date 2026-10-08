@@ -70,9 +70,16 @@ function DayTile({ d, onOpen }) {
   );
 }
 
+const OBJETIVO_LABELS = {
+  fuerza: "FUERZA",
+  resistencia: "RESISTENCIA",
+  perdida_peso: "PÉRDIDA DE PESO",
+};
+
 export default function Dashboard() {
   const navigate = useNavigate();
   const [days, setDays] = useState(null);
+  const [program, setProgram] = useState(null);
   const [profile, setProfile] = useState(null);
   const [error, setError] = useState("");
   const [toast, setToast] = useState("");
@@ -81,6 +88,7 @@ export default function Dashboard() {
     Promise.all([api.getDays(), api.getProfile().catch(() => ({ profile: null }))])
       .then(([daysResp, profileResp]) => {
         setDays(daysResp.days);
+        setProgram(daysResp.program || null);
         setProfile(profileResp.profile);
       })
       .catch((err) => {
@@ -173,9 +181,14 @@ export default function Dashboard() {
         </p>
         <h1 style={{ ...stencil, fontSize: 30, margin: 0, lineHeight: 1 }}>DESAFÍO</h1>
         <h1 style={{ ...stencil, fontSize: 30, margin: 0, lineHeight: 1.1, color: C.moss }}>{totalDays} DÍAS</h1>
-        <p style={{ ...mono, fontSize: 10, color: C.muted, letterSpacing: "0.1em", margin: "4px 0 14px" }}>
+        <p style={{ ...mono, fontSize: 10, color: C.muted, letterSpacing: "0.1em", margin: "4px 0 6px" }}>
           — CALISTENIA MILITAR
         </p>
+        {program && (
+          <p style={{ ...mono, fontSize: 10, color: C.amber, letterSpacing: "0.08em", margin: "0 0 14px" }}>
+            NIVEL {program.nivel_label.toUpperCase()} · {OBJETIVO_LABELS[program.objetivo] || ""}
+          </p>
+        )}
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
           <span style={{ ...mono, fontSize: 11, color: C.muted }}>PROGRESO</span>
@@ -222,9 +235,14 @@ export default function Dashboard() {
                 {nextDay.tipo?.toUpperCase()}
               </span>
             </div>
-            <p style={{ ...mono, fontSize: 11, color: C.muted, margin: "0 0 14px" }}>
+            <p style={{ ...mono, fontSize: 11, color: C.muted, margin: nextDay.needs_bar ? "0 0 6px" : "0 0 14px" }}>
               {nextDay.exercise_count} EJERCICIOS · ~30 MIN
             </p>
+            {nextDay.needs_bar && (
+              <p style={{ ...mono, fontSize: 10, color: C.amber, margin: "0 0 14px", lineHeight: 1.4 }}>
+                DÍA DE BARRA · SI NO TIENES, CADA EJERCICIO TRAE SU ALTERNATIVA
+              </p>
+            )}
             <button
               onClick={() => navigate(`/routine/${nextDay.day}`)}
               style={{

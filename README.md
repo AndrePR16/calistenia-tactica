@@ -47,7 +47,7 @@ Abre `http://localhost:5173` en el navegador.
    También puedes verlo en `backend/data-store/emails/` — ahí queda guardado
    el "correo" como si lo hubieras recibido de verdad.
 6. Inicia sesión con esas credenciales.
-7. Verás tu dashboard de 21 días: Día 1 disponible, el resto bloqueado.
+7. Verás tu dashboard de 21 días: Día 1 disponible, el resto bloqueado. Arriba aparece tu programa (por ejemplo "NIVEL INTERMEDIO · FUERZA").
 8. Entra al Día 1, avanza ejercicio por ejercicio (fíjate en el segundo
    ejercicio de la Semana 1, Día 1 — tiene pestañas "Con silla" / "Sin
    equipo" para que veas la variación funcionando).
@@ -59,12 +59,12 @@ Abre `http://localhost:5173` en el navegador.
 | Parte | Estado |
 |---|---|
 | Login, dashboard, rutina diaria, desbloqueo por día | **Real** — corre contra el backend, persiste en `backend/data-store/db.json` |
-| Catálogo de 21 días + variaciones sin equipo | **Real** — mismo contenido que ya habíamos validado (0 repeticiones por semana). Se acortó de 30 a 21 días para respetar el descanso del cuerpo; la Fase 2 (28 días, más intensa) queda pendiente como programa de continuación. |
-| Recomendación de nivel según experiencia/objetivo | **Real**, reglas simples (ver `backend/src/utils/recommendation.js`) |
+| Programas de 21 días: 3 niveles (Base / Intermedio / Avanzado) × 3 objetivos (fuerza / resistencia / pérdida de peso) = 9 programas | **Real** — la experiencia declarada decide el nivel y el objetivo decide el énfasis (ver "Cómo se asigna el programa"). Catálogo de 46 ejercicios con progresiones y alternativa sin barra. Se acortó de 30 a 21 días para respetar el descanso; la Fase 2 (28 días, más intensa) queda pendiente. |
+| Recomendación de nivel según experiencia/objetivo | **Real**, reglas simples (ver `backend/src/utils/recommendation.js`) — define qué programa recibe cada usuario |
 | Test antes de comprar (US-28) para tráfico de anuncios | **Real** — detecta `?utm_source=` y guarda el lead aunque no compre |
 | Envío de correo con accesos (US-27) | **Simulado** — se guarda como archivo de texto en vez de enviarse. Ver abajo cómo activar el envío real. |
 | Cobro con Culqi | **Simulado** — el botón "Pagar" llama directo al endpoint que crea la cuenta, sin pasar por una pasarela real todavía |
-| Videos de ejercicios | **Real, pero temporal** — cada uno de los 26 ejercicios tiene su GIF real de `JahelCuadrado/ExerciseGymGifsDB` (ver advertencia legal abajo, sección "Antes de vender") |
+| Videos de ejercicios | **Temporal** — 26 de los 46 ejercicios tienen un GIF de `JahelCuadrado/ExerciseGymGifsDB` (no siempre muestra la técnica correcta, ver advertencia legal abajo); los 20 nuevos aún no tienen clip y la app muestra un recuadro "VIDEO: NOMBRE". Se reemplazan por clips propios `.mp4`. |
 
 ## De prueba local a producción
 
@@ -72,7 +72,7 @@ Abre `http://localhost:5173` en el navegador.
 cuatro, no la más técnica.**
 
 0. **Licencia de los GIFs — resolver ANTES de cobrarle a un usuario real**:
-   los 26 GIFs vienen del repositorio público
+   los 26 GIFs actuales (el resto del catálogo aún no tiene clip) vienen del repositorio público
    [`JahelCuadrado/ExerciseGymGifsDB`](https://github.com/JahelCuadrado/ExerciseGymGifsDB),
    servidos vía jsDelivr. Lo revisé y **ese repositorio no tiene un archivo
    `LICENSE`** — ni ahí ni, que yo haya encontrado, en su README. Sin una
@@ -85,7 +85,7 @@ cuatro, no la más técnica.**
      para uso comercial (lo más rápido si responde).
    - Contratar la versión de pago de ExerciseDB en RapidAPI, que sí tiene
      términos comerciales claros.
-   - Grabar tú mismo los 26 clips — con 5 ejercicios por día y contenido que
+   - Grabar tú mismo los clips (46 ejercicios, ver `lista_ejercicios.md`) — con contenido que
      ya conoces bien, es más manejable de lo que sueles pensar, y te da
      control total sobre la calidad y el estilo.
    - No soy abogado, así que si tienes dudas de qué tan expuesto quedarías,
@@ -116,6 +116,25 @@ orden:
    perfecto para probar pero no para producción (no soporta escrituras
    concurrentes de verdad). Migrar a Postgres/MySQL es directo porque el
    "shape" de los datos ya está definido en `backend/src/db.js`.
+
+## Cómo se asigna el programa
+
+Cada persona recibe uno de 9 programas de 21 días, que siempre arranca en el día 1:
+
+- **Nivel** (por experiencia previa): nunca entrené → **Base**, entrené antes →
+  **Intermedio**, entreno actualmente → **Avanzado**.
+- **Objetivo** (cambia el énfasis dentro del nivel): **fuerza** cierra cada día con
+  empuje/tracción/pierna a una pierna y descansa más; **resistencia** cierra con
+  cardio y descansa menos; **pérdida de peso** agrega un bloque de cardio extra
+  (6 ejercicios) y descansa menos.
+- **Barra opcional**: los ejercicios con barra (dominadas, colgados, remo en barra
+  baja…) tienen siempre una alternativa "sin equipo", y la app avisa cuándo toca
+  un día de barra.
+
+Todo sale de `backend/src/data/generate-data.js` (3 programas escritos a mano + las
+reglas del objetivo) y queda en `programs.json`. Para ajustar contenido: edita ese
+archivo y corre `npm run generate-data`; el generador valida que no haya ejercicios
+repetidos dentro de un mismo día ni ejercicios con barra sin alternativa.
 
 ## Decisión de diseño: la silueta corporal no cambia la dificultad
 

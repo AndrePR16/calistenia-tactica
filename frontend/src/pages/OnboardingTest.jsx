@@ -230,7 +230,7 @@ export default function OnboardingTest({ mode = "lead" }) {
             }}
           >
             <p style={{ fontSize: 11, color: C.amber, margin: 0, ...mono }}>
-              SEMANA {recommendation.startWeek} · DÍA {recommendation.startDay}
+              PROGRAMA {(recommendation.nivelLabel || "Base").toUpperCase()} · 21 DÍAS
             </p>
             <p style={{ fontSize: 14, marginTop: 8, lineHeight: 1.5 }}>
               {recommendation.message}

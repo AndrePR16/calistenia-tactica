@@ -11,7 +11,7 @@
     "instructions": "De pie frente a una pared, manos a la altura del pecho. Flexiona los codos acercando el pecho a la pared y empuja.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/pectorals/push-up-wall.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
     "id": "flexiones_rodillas",
@@ -22,10 +22,10 @@
     ],
     "equipment_needed": [],
     "difficulty": "principiante",
-    "instructions": "Igual que la flexión estándar pero con rodillas en el suelo, para reducir la carga mientras se gana fuerza.",
+    "instructions": "Igual que la flexión estándar pero con las rodillas en el suelo, para reducir la carga mientras ganas fuerza.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/pectorals/kneeling-push-up-male.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
     "id": "flexiones",
@@ -37,10 +37,10 @@
     ],
     "equipment_needed": [],
     "difficulty": "principiante",
-    "instructions": "Manos a la altura de los hombros, cuerpo recto de cabeza a talones, baja el pecho casi hasta el suelo y empuja.",
+    "instructions": "Manos a la altura de los hombros, cuerpo recto de cabeza a talones. Baja el pecho casi hasta el suelo y empuja fuerte para volver.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/pectorals/push-up.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
     "id": "flexiones_diamante",
@@ -51,10 +51,10 @@
     ],
     "equipment_needed": [],
     "difficulty": "intermedio",
-    "instructions": "Manos juntas bajo el pecho formando un diamante. Baja controlado.",
+    "instructions": "Junta las manos bajo el pecho formando un diamante con índices y pulgares. Baja con los codos cerca del cuerpo.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/triceps/diamond-push-up.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
     "id": "flexiones_pica",
@@ -65,10 +65,149 @@
     ],
     "equipment_needed": [],
     "difficulty": "intermedio",
-    "instructions": "Cadera elevada en V invertida, baja la cabeza hacia el suelo y empuja.",
+    "instructions": "Cadera elevada en V invertida. Baja la cabeza hacia el suelo entre las manos y empuja.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/pike-to-cobra-push-up.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
+  },
+  {
+    "id": "flexiones_pies_elevados",
+    "name": "Flexiones con pies elevados",
+    "muscle_groups": [
+      "pecho",
+      "hombro",
+      "triceps"
+    ],
+    "equipment_needed": [
+      "silla_o_banco"
+    ],
+    "difficulty": "intermedio",
+    "instructions": "Pies sobre una silla o banco firme, cuerpo en línea recta. Baja el pecho al suelo y empuja. Cuanto más altos los pies, más carga en hombros y pecho alto.",
+    "video_url": null,
+    "no_equipment_variation_id": "flexiones"
+  },
+  {
+    "id": "flexiones_arquero",
+    "name": "Flexiones arquero",
+    "muscle_groups": [
+      "pecho",
+      "triceps",
+      "hombro"
+    ],
+    "equipment_needed": [],
+    "difficulty": "avanzado",
+    "instructions": "Manos más separadas que los hombros. Baja el pecho hacia una mano mientras el otro brazo se mantiene casi recto, sube y alterna lados.",
+    "video_url": null,
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "fondos_banco",
+    "name": "Fondos de tríceps en banco/silla",
+    "muscle_groups": [
+      "triceps",
+      "hombro"
+    ],
+    "equipment_needed": [
+      "silla_o_banco"
+    ],
+    "difficulty": "intermedio",
+    "instructions": "Manos en el borde de una silla firme, piernas extendidas. Baja el cuerpo doblando los codos y empuja.",
+    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/triceps/bench-dip-on-floor.gif",
+    "no_equipment_variation_id": "flexiones_diamante",
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
+  },
+  {
+    "id": "remo_invertido_mesa",
+    "name": "Remo invertido bajo mesa (sin barra)",
+    "muscle_groups": [
+      "espalda",
+      "biceps"
+    ],
+    "equipment_needed": [
+      "mesa_resistente"
+    ],
+    "difficulty": "principiante",
+    "instructions": "Acostado bajo una mesa firme, sujeta el borde y tira del pecho hacia la mesa manteniendo el cuerpo recto.",
+    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/upper-back/inverted-row.gif",
+    "no_equipment_variation_id": null,
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
+  },
+  {
+    "id": "remo_invertido",
+    "name": "Remo invertido en barra baja",
+    "muscle_groups": [
+      "espalda",
+      "biceps"
+    ],
+    "equipment_needed": [
+      "barra"
+    ],
+    "difficulty": "intermedio",
+    "instructions": "Bajo una barra baja y firme, agarre al ancho de hombros y cuerpo recto de talones a cabeza. Tira del pecho hacia la barra juntando los omóplatos y baja controlado. Cuanto más horizontal el cuerpo, más difícil.",
+    "video_url": null,
+    "no_equipment_variation_id": "remo_invertido_mesa"
+  },
+  {
+    "id": "dead_hang",
+    "name": "Colgado en barra (dead hang)",
+    "muscle_groups": [
+      "espalda",
+      "antebrazo",
+      "hombro"
+    ],
+    "equipment_needed": [
+      "barra"
+    ],
+    "difficulty": "principiante",
+    "instructions": "Cuelga de la barra con agarre firme y brazos extendidos, hombros activos (sin encogerlos hacia las orejas) y cuerpo estable. Mantén el tiempo indicado.",
+    "video_url": null,
+    "no_equipment_variation_id": "superman"
+  },
+  {
+    "id": "dominada_negativa",
+    "name": "Dominada negativa",
+    "muscle_groups": [
+      "espalda",
+      "biceps"
+    ],
+    "equipment_needed": [
+      "barra"
+    ],
+    "difficulty": "intermedio",
+    "instructions": "Sube a la posición con la barbilla sobre la barra (con salto o ayudándote de un banco) y baja lo más lento posible, 3 a 5 segundos, hasta extender los brazos.",
+    "video_url": null,
+    "no_equipment_variation_id": "remo_invertido_mesa"
+  },
+  {
+    "id": "dominadas",
+    "name": "Dominadas (pull-ups)",
+    "muscle_groups": [
+      "espalda",
+      "biceps"
+    ],
+    "equipment_needed": [
+      "barra"
+    ],
+    "difficulty": "avanzado",
+    "instructions": "Cuelga de la barra con agarre prono, sube hasta que la barbilla pase la barra y baja controlado, sin balanceo.",
+    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/lats/pull-up.gif",
+    "no_equipment_variation_id": "remo_invertido_mesa",
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
+  },
+  {
+    "id": "dominada_supina",
+    "name": "Dominada supina (chin-up)",
+    "muscle_groups": [
+      "espalda",
+      "biceps"
+    ],
+    "equipment_needed": [
+      "barra"
+    ],
+    "difficulty": "avanzado",
+    "instructions": "Agarre con las palmas hacia ti, manos al ancho de hombros. Sube hasta pasar la barbilla de la barra sin balanceo y baja controlado hasta extender los brazos.",
+    "video_url": null,
+    "no_equipment_variation_id": "remo_invertido_mesa"
   },
   {
     "id": "sentadillas",
@@ -79,10 +218,10 @@
     ],
     "equipment_needed": [],
     "difficulty": "principiante",
-    "instructions": "Pies al ancho de hombros, baja como si te sentaras, pecho arriba, rodillas alineadas con los pies.",
+    "instructions": "Pies al ancho de hombros, baja como si te sentaras con el pecho arriba y el peso en los talones; las rodillas siguen la línea de los pies.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/potty-squat.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
     "id": "sentadilla_sumo",
@@ -94,10 +233,10 @@
     ],
     "equipment_needed": [],
     "difficulty": "principiante",
-    "instructions": "Pies bien separados, puntas hacia afuera, baja en sentadilla manteniendo la espalda recta.",
+    "instructions": "Pies bien separados con las puntas hacia afuera. Baja en sentadilla manteniendo la espalda recta.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/smith-sumo-squat.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)",
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)",
     "video_is_approximate": true
   },
   {
@@ -110,10 +249,10 @@
     ],
     "equipment_needed": [],
     "difficulty": "intermedio",
-    "instructions": "Baja en sentadilla y explota hacia arriba en un salto, aterriza suave.",
+    "instructions": "Baja en sentadilla y explota hacia arriba en un salto; aterriza suave y baja de nuevo.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/jump-squat.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
     "id": "zancadas",
@@ -127,7 +266,20 @@
     "instructions": "Da un paso largo al frente, baja la rodilla trasera casi al suelo y vuelve. Alterna piernas.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/forward-lunge-male.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
+  },
+  {
+    "id": "zancada_reversa",
+    "name": "Zancada reversa alternada",
+    "muscle_groups": [
+      "cuadriceps",
+      "gluteos"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "De pie, da un paso largo hacia atrás y baja la rodilla trasera casi al suelo con el torso erguido y el peso en el talón de adelante. Empuja con la pierna delantera para volver y alterna.",
+    "video_url": null,
+    "no_equipment_variation_id": null
   },
   {
     "id": "zancada_lateral",
@@ -139,11 +291,26 @@
     ],
     "equipment_needed": [],
     "difficulty": "principiante",
-    "instructions": "Da un paso amplio hacia el lado, flexiona esa rodilla y vuelve al centro.",
+    "instructions": "Da un paso amplio hacia el lado, flexiona esa rodilla manteniendo la otra pierna recta y vuelve al centro.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/barbell-lateral-lunge.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)",
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)",
     "video_is_approximate": true
+  },
+  {
+    "id": "sentadilla_bulgara_asistida",
+    "name": "Sentadilla búlgara asistida",
+    "muscle_groups": [
+      "cuadriceps",
+      "gluteos"
+    ],
+    "equipment_needed": [
+      "silla_o_banco"
+    ],
+    "difficulty": "principiante",
+    "instructions": "Apoya el empeine del pie trasero en una silla o banco firme. Baja controlando la rodilla delantera y sube empujando con el talón. Si necesitas equilibrio, apoya una mano en una pared o poste.",
+    "video_url": null,
+    "no_equipment_variation_id": "zancada_reversa"
   },
   {
     "id": "sentadilla_bulgara",
@@ -156,10 +323,64 @@
       "silla_o_banco"
     ],
     "difficulty": "intermedio",
-    "instructions": "Pie trasero apoyado en una silla o banco, baja en sentadilla con la pierna delantera.",
+    "instructions": "Pie trasero apoyado en una silla o banco, sin ayuda de las manos. Baja con la pierna delantera hasta que el muslo quede paralelo al suelo y sube.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/quads/split-squats.gif",
     "no_equipment_variation_id": "zancadas",
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
+  },
+  {
+    "id": "sentadilla_pistol_asistida",
+    "name": "Sentadilla a una pierna asistida",
+    "muscle_groups": [
+      "cuadriceps",
+      "gluteos"
+    ],
+    "equipment_needed": [],
+    "difficulty": "intermedio",
+    "instructions": "Sujeta una superficie estable (marco de puerta, poste o barra) con una mano. Baja en sentadilla sobre una sola pierna con la otra extendida al frente y sube controlando; usa la mano solo lo necesario.",
+    "video_url": null,
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "pistol_squat",
+    "name": "Sentadilla pistol",
+    "muscle_groups": [
+      "cuadriceps",
+      "gluteos",
+      "core"
+    ],
+    "equipment_needed": [],
+    "difficulty": "avanzado",
+    "instructions": "Sobre una pierna y con la otra extendida al frente, baja en sentadilla profunda con el torso erguido y sube sin impulso. Si pierdes el equilibrio, vuelve a la versión asistida.",
+    "video_url": null,
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "sentadilla_pared",
+    "name": "Sentadilla isométrica en pared (wall sit)",
+    "muscle_groups": [
+      "cuadriceps",
+      "gluteos"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Apoya la espalda en una pared con rodillas y cadera a 90°, como sentado en una silla invisible. Mantén la posición sin apoyar las manos en los muslos.",
+    "video_url": null,
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "puente_gluteo",
+    "name": "Puente de glúteos",
+    "muscle_groups": [
+      "gluteos",
+      "isquiotibiales"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Acostado, rodillas flexionadas. Eleva la cadera apretando glúteos y baja sin apoyar del todo.",
+    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/low-glute-bridge-on-floor.gif",
+    "no_equipment_variation_id": null,
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
     "id": "plancha",
@@ -169,10 +390,10 @@
     ],
     "equipment_needed": [],
     "difficulty": "principiante",
-    "instructions": "Antebrazos y puntas de los pies en el suelo, cuerpo en línea recta, aprieta el abdomen.",
+    "instructions": "Antebrazos y puntas de los pies en el suelo, cuerpo en línea recta y abdomen firme.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/power-point-plank.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
     "id": "plancha_lateral",
@@ -183,10 +404,10 @@
     ],
     "equipment_needed": [],
     "difficulty": "intermedio",
-    "instructions": "Apoyo en un antebrazo, cuerpo de lado en línea recta, cadera arriba sin caer.",
+    "instructions": "Apoyo en un antebrazo y el borde del pie, cuerpo de lado en línea recta, cadera arriba sin caer.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/adductors/side-plank-hip-adduction.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
     "id": "plancha_toques_hombro",
@@ -200,35 +421,86 @@
     "instructions": "En plancha alta, toca el hombro contrario con cada mano alternando, sin mover la cadera.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/shoulder-tap.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
-    "id": "abdominales_bicicleta",
-    "name": "Abdominales bicicleta",
+    "id": "plancha_alcance",
+    "name": "Plancha con alcance de brazo",
     "muscle_groups": [
       "core",
-      "oblicuos"
-    ],
-    "equipment_needed": [],
-    "difficulty": "principiante",
-    "instructions": "Acostado boca arriba, lleva codo contrario a rodilla contraria en un pedaleo controlado.",
-    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/air-bike.gif",
-    "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
-  },
-  {
-    "id": "elevacion_piernas_acostado",
-    "name": "Elevación de piernas acostado",
-    "muscle_groups": [
-      "core",
-      "abdomen_bajo"
+      "hombro"
     ],
     "equipment_needed": [],
     "difficulty": "intermedio",
-    "instructions": "Acostado boca arriba, piernas rectas, sube y baja sin despegar la zona lumbar.",
-    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/lying-leg-raise-flat-bench.gif",
-    "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "instructions": "En plancha alta, extiende un brazo al frente alternando lados, sin que la cadera se balancee. Separa un poco los pies para ganar estabilidad.",
+    "video_url": null,
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "plancha_subidas",
+    "name": "Plancha arriba-abajo (plank up-downs)",
+    "muscle_groups": [
+      "core",
+      "triceps",
+      "hombro"
+    ],
+    "equipment_needed": [],
+    "difficulty": "intermedio",
+    "instructions": "Desde plancha sobre antebrazos, sube a plancha alta apoyando una mano y luego la otra; baja de la misma forma. Alterna el brazo que inicia y mantén la cadera estable.",
+    "video_url": null,
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "inchworm",
+    "name": "Caminata a plancha (inchworm)",
+    "muscle_groups": [
+      "core",
+      "hombro",
+      "isquiotibiales"
+    ],
+    "equipment_needed": [],
+    "difficulty": "intermedio",
+    "instructions": "De pie, baja las manos al suelo y camina con ellas hacia delante hasta plancha alta. Pausa un segundo y regresa caminando con las manos, con las piernas lo más rectas posible.",
+    "video_url": null,
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "hollow_body",
+    "name": "Hollow body hold",
+    "muscle_groups": [
+      "core"
+    ],
+    "equipment_needed": [],
+    "difficulty": "intermedio",
+    "instructions": "Boca arriba, eleva hombros y piernas del suelo con la zona lumbar pegada al piso y el cuerpo en forma de banana. Si es muy difícil, flexiona las rodillas. Mantén la posición.",
+    "video_url": null,
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "dead_bug",
+    "name": "Dead bug",
+    "muscle_groups": [
+      "core"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Boca arriba, brazos al techo y rodillas a 90°. Extiende brazo y pierna contrarios hacia el suelo sin despegar la zona lumbar, vuelve y alterna.",
+    "video_url": null,
+    "no_equipment_variation_id": null
+  },
+  {
+    "id": "bird_dog",
+    "name": "Bird dog",
+    "muscle_groups": [
+      "core",
+      "espalda_baja",
+      "gluteos"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "En cuatro apoyos con la espalda neutra, extiende brazo y pierna contrarios a la vez sin rotar la cadera. Vuelve y alterna.",
+    "video_url": null,
+    "no_equipment_variation_id": null
   },
   {
     "id": "superman",
@@ -239,112 +511,65 @@
     ],
     "equipment_needed": [],
     "difficulty": "principiante",
-    "instructions": "Boca abajo, eleva brazos y piernas al mismo tiempo, sostén y baja controlado.",
+    "instructions": "Boca abajo, eleva brazos y piernas al mismo tiempo, sostén un segundo y baja controlado.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/pectorals/superman-push-up.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
-    "id": "puente_gluteo",
-    "name": "Puente de glúteos",
+    "id": "abdominal_crunch",
+    "name": "Crunch abdominal",
     "muscle_groups": [
-      "gluteos",
-      "isquiotibiales"
+      "core"
     ],
     "equipment_needed": [],
     "difficulty": "principiante",
-    "instructions": "Acostado, rodillas flexionadas, eleva la cadera apretando glúteos y baja sin tocar el suelo.",
-    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/glutes/low-glute-bridge-on-floor.gif",
-    "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "instructions": "Boca arriba con las rodillas flexionadas, eleva la parte alta de la espalda acercando el pecho a las rodillas sin tirar del cuello. Baja controlado.",
+    "video_url": null,
+    "no_equipment_variation_id": null
   },
   {
-    "id": "burpees",
-    "name": "Burpees",
+    "id": "abdominales_bicicleta",
+    "name": "Abdominales bicicleta",
     "muscle_groups": [
-      "full_body",
-      "cardio"
+      "core",
+      "oblicuos"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Boca arriba, lleva el codo hacia la rodilla contraria en un pedaleo controlado.",
+    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/air-bike.gif",
+    "no_equipment_variation_id": null,
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
+  },
+  {
+    "id": "elevacion_piernas_acostado",
+    "name": "Elevación de piernas acostado",
+    "muscle_groups": [
+      "core",
+      "abdomen_bajo"
     ],
     "equipment_needed": [],
     "difficulty": "intermedio",
-    "instructions": "De pie, baja a sentadilla, apoya manos, salta pies atrás a plancha, flexión, vuelve y salta arriba.",
-    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/cardio/burpee.gif",
+    "instructions": "Boca arriba con las piernas rectas, sube y baja sin despegar la zona lumbar del suelo.",
+    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/lying-leg-raise-flat-bench.gif",
     "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
-    "id": "escaladores",
-    "name": "Escaladores (mountain climbers)",
+    "id": "elevacion_rodillas_colgado",
+    "name": "Elevación de rodillas colgado",
     "muscle_groups": [
       "core",
-      "cardio"
-    ],
-    "equipment_needed": [],
-    "difficulty": "principiante",
-    "instructions": "En plancha alta, lleva rodillas al pecho alternando rápido.",
-    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/cardio/mountain-climber.gif",
-    "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
-  },
-  {
-    "id": "rodillas_altas",
-    "name": "Rodillas altas (high knees)",
-    "muscle_groups": [
-      "cardio",
-      "piernas"
-    ],
-    "equipment_needed": [],
-    "difficulty": "principiante",
-    "instructions": "Trota en el sitio llevando las rodillas a la altura de la cadera lo más rápido posible.",
-    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/cardio/walking-high-knees-lunge.gif",
-    "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
-  },
-  {
-    "id": "salto_tijera",
-    "name": "Salto de tijera (jumping jacks)",
-    "muscle_groups": [
-      "cardio",
-      "full_body"
-    ],
-    "equipment_needed": [],
-    "difficulty": "principiante",
-    "instructions": "Salta separando piernas y brazos hacia afuera, vuelve a la posición inicial en el mismo salto.",
-    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/cardio/star-jump-male.gif",
-    "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
-  },
-  {
-    "id": "dominadas",
-    "name": "Dominadas (pull-ups)",
-    "muscle_groups": [
-      "espalda",
-      "biceps"
+      "abdomen_bajo"
     ],
     "equipment_needed": [
       "barra"
     ],
-    "difficulty": "avanzado",
-    "instructions": "Cuelga de la barra con agarre prono, sube hasta que la barbilla pase la barra, baja controlado.",
-    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/lats/pull-up.gif",
-    "no_equipment_variation_id": "remo_invertido_mesa",
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
-  },
-  {
-    "id": "remo_invertido_mesa",
-    "name": "Remo invertido bajo mesa (sin barra)",
-    "muscle_groups": [
-      "espalda",
-      "biceps"
-    ],
-    "equipment_needed": [
-      "mesa_resistente"
-    ],
-    "difficulty": "principiante",
-    "instructions": "Acostado bajo una mesa firme, sujeta el borde y tira del pecho hacia la mesa.",
-    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/upper-back/inverted-row.gif",
-    "no_equipment_variation_id": null,
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "difficulty": "intermedio",
+    "instructions": "Colgado de la barra, sube las rodillas hacia el pecho curvando ligeramente la pelvis, sin balancearte. Baja controlado.",
+    "video_url": null,
+    "no_equipment_variation_id": "elevacion_piernas_acostado"
   },
   {
     "id": "elevacion_piernas_colgado",
@@ -357,25 +582,78 @@
       "barra"
     ],
     "difficulty": "avanzado",
-    "instructions": "Colgado de la barra, sube las piernas rectas o con rodillas flexionadas sin balancear.",
+    "instructions": "Colgado de la barra, sube las piernas rectas (o ligeramente flexionadas) hasta la altura de la cadera o más, sin balancear.",
     "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/abs/hanging-leg-raise.gif",
     "no_equipment_variation_id": "elevacion_piernas_acostado",
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
   },
   {
-    "id": "fondos_banco",
-    "name": "Fondos de tríceps en banco/silla",
+    "id": "burpees",
+    "name": "Burpees",
     "muscle_groups": [
-      "triceps",
-      "hombro"
+      "full_body",
+      "cardio"
     ],
-    "equipment_needed": [
-      "silla_o_banco"
-    ],
+    "equipment_needed": [],
     "difficulty": "intermedio",
-    "instructions": "Manos en el borde de una silla, piernas extendidas, baja el cuerpo doblando los codos y empuja.",
-    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/triceps/bench-dip-on-floor.gif",
-    "no_equipment_variation_id": "flexiones_diamante",
-    "video_source": "JahelCuadrado/ExerciseGymGifsDB (CC, vía jsDelivr)"
+    "instructions": "De pie, baja a sentadilla, apoya las manos, salta con los pies atrás a plancha, haz una flexión si puedes, vuelve y salta arriba.",
+    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/cardio/burpee.gif",
+    "no_equipment_variation_id": null,
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
+  },
+  {
+    "id": "escaladores",
+    "name": "Escaladores (mountain climbers)",
+    "muscle_groups": [
+      "core",
+      "cardio"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "En plancha alta, lleva las rodillas al pecho alternando rápido.",
+    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/cardio/mountain-climber.gif",
+    "no_equipment_variation_id": null,
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
+  },
+  {
+    "id": "rodillas_altas",
+    "name": "Rodillas altas (high knees)",
+    "muscle_groups": [
+      "cardio",
+      "piernas"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Trota en el sitio llevando las rodillas a la altura de la cadera, con los brazos activos.",
+    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/cardio/walking-high-knees-lunge.gif",
+    "no_equipment_variation_id": null,
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
+  },
+  {
+    "id": "salto_tijera",
+    "name": "Salto de tijera (jumping jacks)",
+    "muscle_groups": [
+      "cardio",
+      "full_body"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Salta separando piernas y brazos hacia afuera y vuelve a la posición inicial en el mismo salto.",
+    "video_url": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/cardio/star-jump-male.gif",
+    "no_equipment_variation_id": null,
+    "video_source": "JahelCuadrado/ExerciseGymGifsDB (temporal, ver lista_ejercicios.md)"
+  },
+  {
+    "id": "paso_lateral",
+    "name": "Pasos laterales (side steps)",
+    "muscle_groups": [
+      "cardio",
+      "piernas"
+    ],
+    "equipment_needed": [],
+    "difficulty": "principiante",
+    "instructions": "Da pasos laterales amplios a derecha e izquierda con las rodillas ligeramente flexionadas y los brazos activos, a ritmo constante.",
+    "video_url": null,
+    "no_equipment_variation_id": null
   }
 ]

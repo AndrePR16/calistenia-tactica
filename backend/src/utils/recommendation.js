@@ -10,16 +10,42 @@
 // Peso/estatura/silueta se guardan igual (para reportes futuros, o para que
 // más adelante ajustes textos de la app), pero no cambian el contenido.
 
-const EXPERIENCIA_A_SEMANA = {
-  nunca_entrene: 1,
-  entrene_antes: 2,
-  entreno_actualmente: 3,
+// La experiencia previa decide el NIVEL del programa (cada nivel es un
+// programa completo de 21 días que arranca en el día 1). El objetivo decide
+// el énfasis dentro de ese nivel (ver generate-data.js, applyObjective).
+// Antes, "entrené antes" solo prometía "saltar al día 8" pero nunca se aplicaba
+// y todos recibían la misma rutina; eso se reemplazó por programas distintos.
+const EXPERIENCIA_A_NIVEL = {
+  nunca_entrene: "base",
+  entrene_antes: "intermedio",
+  entreno_actualmente: "avanzado",
+};
+
+const NIVEL_INFO = {
+  base: {
+    label: "Base",
+    mensaje:
+      "Como es tu primera vez entrenando, tu programa es el Nivel Base: aprendes la técnica y construyes la base sin lesionarte.",
+  },
+  intermedio: {
+    label: "Intermedio",
+    mensaje:
+      "Como ya entrenaste antes, tu programa es el Nivel Intermedio: remo y dominadas negativas (con barra o alternativa sin equipo), sentadillas asistidas a una pierna y progresiones de flexiones desde el día 1.",
+  },
+  avanzado: {
+    label: "Avanzado",
+    mensaje:
+      "Como entrenas actualmente, tu programa es el Nivel Avanzado: dominadas, pistol squat, flexiones arquero y circuitos de alta intensidad desde el día 1.",
+  },
 };
 
 const OBJETIVO_MENSAJE = {
-  fuerza: "Vamos a priorizar tu progreso en dominadas, flexiones y fuerza de tren superior.",
-  resistencia: "Vamos a priorizar los circuitos cardio y reducir el descanso entre series.",
-  perdida_peso: "Vamos a mantenerte en movimiento constante con más ejercicios full-body.",
+  fuerza:
+    "Priorizamos fuerza: cada día cierra con trabajo de empuje, tracción o pierna a una pierna, y descansas más entre series.",
+  resistencia:
+    "Priorizamos resistencia: cada día cierra con cardio y los descansos entre series son más cortos.",
+  perdida_peso:
+    "Priorizamos gasto calórico: sumamos un bloque de cardio extra al final de cada día y descansas menos entre series.",
 };
 
 const SILUETA_OPCIONES = ["delgado", "promedio", "atletico", "contextura_mayor"];
@@ -38,26 +64,37 @@ const TIPO_OPERADOR_INFO = {
   agil: { label: "Ágil", desc: "Alta movilidad y definición" },
 };
 
+function nivelPara(experiencia) {
+  return EXPERIENCIA_A_NIVEL[experiencia] || "base";
+}
+
+// Clave del programa en programs.json. Se calcula siempre desde las respuestas
+// del perfil (no desde la recomendación guardada) para que sea robusta si el
+// perfil se guardó con una versión anterior de las reglas.
+function programKey({ experiencia, objetivo }) {
+  const obj = OBJETIVO_OPCIONES.includes(objetivo) ? objetivo : "fuerza";
+  return `${nivelPara(experiencia)}__${obj}`;
+}
+
 function recomendar({ objetivo, experiencia }) {
-  const startWeek = EXPERIENCIA_A_SEMANA[experiencia] || 1;
-  const startDay = (startWeek - 1) * 7 + 1;
+  const nivel = nivelPara(experiencia);
+  const info = NIVEL_INFO[nivel];
   const objetivoTexto = OBJETIVO_MENSAJE[objetivo] || "";
 
-  const experienciaTexto = {
-    1: "Como es tu primera vez entrenando, arrancas en la Semana 1 para construir la base sin lesionarte.",
-    2: "Como ya entrenaste antes, arrancas en la Semana 2 — saltamos lo más básico.",
-    3: "Como entrenas actualmente, arrancas en la Semana 3 para que el reto esté a tu nivel real.",
-  }[startWeek];
-
   return {
-    startWeek,
-    startDay,
-    message: `${experienciaTexto} ${objetivoTexto}`.trim(),
+    nivel,
+    nivelLabel: info.label,
+    programKey: programKey({ experiencia, objetivo }),
+    startDay: 1,
+    message: `${info.mensaje} ${objetivoTexto}`.trim(),
   };
 }
 
 module.exports = {
   recomendar,
+  programKey,
+  nivelPara,
+  NIVEL_INFO,
   SILUETA_OPCIONES,
   OBJETIVO_OPCIONES,
   EXPERIENCIA_OPCIONES,
