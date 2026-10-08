@@ -90,9 +90,13 @@ cuatro, no la más técnica.**
      control total sobre la calidad y el estilo.
    - No soy abogado, así que si tienes dudas de qué tan expuesto quedarías,
      esto es algo puntual que vale la pena confirmar con uno antes de lanzar.
-   Mientras tanto, el archivo `backend/src/data/gif-map.json` es donde vive
-   el mapeo ejercicio → GIF: cambiar la fuente es solo reemplazar esas 26
-   URLs, no tocar el resto del código.
+   **Cómo poner tus propios clips:** deja `<id>.mp4` (o `.webm`/`.mov`) en
+   `frontend/public/videos/` — el `id` es el de `lista_ejercicios.md`, ej.
+   `flexiones.mp4` — y corre `npm run generate-data` en `backend/`. El clip
+   reemplaza al GIF temporal de ese ejercicio. Si prefieres alojarlos fuera
+   (un CDN), crea `backend/src/data/video-map.json` con
+   `{ "flexiones": "https://tu-cdn.com/flexiones.mp4" }`. No hace falta tocar
+   `exercises.json` a mano (se regenera).
 
 Otras tres cosas hay que resolver antes de vender esto de verdad, en este
 orden:

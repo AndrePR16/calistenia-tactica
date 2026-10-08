@@ -414,10 +414,31 @@ for (const e of catalog) {
   if (APPROXIMATE_MATCH.has(e.id)) e.video_is_approximate = true;
 }
 
+// Clips propios: deja <id>.mp4 (o .webm/.mov) en frontend/public/videos/ y
+// corre `npm run generate-data` — el clip reemplaza al GIF temporal y se sirve
+// como /videos/<id>.mp4. Para alojarlos fuera (CDN), usa video-map.json:
+// { "flexiones": "https://mi-cdn.com/flexiones.mp4" } (tiene prioridad).
+const videosDir = path.join(__dirname, "..", "..", "..", "frontend", "public", "videos");
+const videoMapPath = path.join(__dirname, "video-map.json");
+const videoMap = fs.existsSync(videoMapPath) ? JSON.parse(fs.readFileSync(videoMapPath, "utf-8")) : {};
+let ownClips = 0;
+for (const e of catalog) {
+  let url = videoMap[e.id] || null;
+  if (!url) {
+    const ext = ["mp4", "webm", "mov"].find((x) => fs.existsSync(path.join(videosDir, `${e.id}.${x}`)));
+    if (ext) url = `/videos/${e.id}.${ext}`;
+  }
+  if (!url) continue;
+  e.video_url = url;
+  e.video_source = "propio";
+  delete e.video_is_approximate;
+  ownClips++;
+}
+
 fs.writeFileSync(path.join(__dirname, "exercises.json"), JSON.stringify(catalog, null, 2));
 fs.writeFileSync(path.join(__dirname, "programs.json"), JSON.stringify(programs, null, 2));
 
 const withGif = catalog.filter((e) => e.video_url).length;
 console.log(`OK: ${catalog.length} ejercicios en catálogo, ${Object.keys(programs).length} programas de ${TOTAL_DAYS} días.`);
-console.log(`   Con GIF temporal: ${withGif} · sin clip todavía: ${catalog.length - withGif}`);
+console.log(`   Clips propios: ${ownClips} · con GIF temporal: ${catalog.filter((e) => e.video_source && e.video_source !== "propio").length} · sin clip todavía: ${catalog.length - withGif}`);
 if (unused.length) console.log(`   Definidos pero sin usar (no se publican): ${unused.join(", ")}`);
